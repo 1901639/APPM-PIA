@@ -1,0 +1,7 @@
+{
+  "name": "PIA_APM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
