@@ -8,25 +8,15 @@ import {Router} from '@angular/router'
   templateUrl: './login.page.html',
   styleUrl: './login.scss'
 })
-export class LoginPage implements OnInit {
+export class LoginPage{
   public email: string = '';
   public password: string = '';
-  public user: User | null = null;
   public message: unknown = '';
   public isToastOpen = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
-
-  ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      if (user) {
-        this.user = user;
-        this.router.navigate(['/'])
-      } else {
-        this.user = null;
-      }
-    });
+  constructor(private authService: AuthService, private router: Router) {
   }
+
 
   async login() {
     this.isToastOpen = false
