@@ -19,8 +19,12 @@
     </ion-item>
 
     <ion-button expand="full" type="submit" (click)="register()">Registrarse</ion-button>
-    
+    <div class="login-register">
+      <span>ó</span>
+      <a href="/login">Log In</a>
+    </div>
     
     <ion-toast color="danger" [isOpen]="isToastOpen" [message]="message" [duration]="3000"></ion-toast>
+
   </form>
 </ion-content>
